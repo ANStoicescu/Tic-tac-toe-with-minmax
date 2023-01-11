@@ -3,12 +3,14 @@ package Player_interface;
 import Game_env.Board;
 
 public class Hard extends Player {
+    /* Here we have an AI that decides its next move with the help of minmax algorithm */
     public Hard(Board board_ctrl) {
         this.board_ctrl = board_ctrl;
     }
 
     int minmax(int[][] board, int player, int depth, Boolean getMax) {
         int whoWon = board_ctrl.checkWin();
+
         if (whoWon == player)
             return 10 - depth;
         if (whoWon == Math.abs(player - 1))

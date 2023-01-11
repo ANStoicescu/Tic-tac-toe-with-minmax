@@ -4,6 +4,7 @@ import java.util.Random;
 import Game_env.Board;
 
 public class Easy extends Player {
+    /* This AI chooses its next move randomly */
     public Easy(Board board_ctrl) {
         this.board_ctrl = board_ctrl;
     }

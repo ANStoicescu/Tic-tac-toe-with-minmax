@@ -62,7 +62,7 @@ public class Board {
             return 2;
 
 
-        for (int i = 0; i < 3; i++) { //Check win on line
+        for (int i = 0; i < 3; i++) { //Check win on lines
             player = board[i][0];
             isWin = true;
             for (int j = 0; j < 3; j++) {
@@ -77,7 +77,7 @@ public class Board {
                 return 1;
         }
 
-        for (int i = 0; i < 3; i++) { //Check win on column
+        for (int i = 0; i < 3; i++) { //Check win on columns
             player = board[0][i];
             isWin = true;
             for (int j = 0; j < 3; j++) {
@@ -92,7 +92,7 @@ public class Board {
                 return 1;
         }
 
-        if ((board[0][0] == board[1][1] && board[1][1] == board[2][2])
+        if ((board[0][0] == board[1][1] && board[1][1] == board[2][2]) // Check win on diagonals
                 || (board[0][2] == board[1][1] && board[1][1] == board[2][0])) {
             if (board[1][1] == 1)
                 return 1;

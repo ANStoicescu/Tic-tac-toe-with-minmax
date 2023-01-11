@@ -3,6 +3,10 @@ package Player_interface;
 import Game_env.Board;
 
 public class Medium extends Easy {
+    /*  When the AI is playing at medium difficulty level, it makes moves using the following logic:
+            1. If it already has two in a row and can win with one further move, it does so.
+            2. If its opponent can win with one move, it plays the move necessary to block this.
+            3. Otherwise, it makes a random move.   */
     public Medium(Board board_ctrl) {
         super(board_ctrl);
     }
